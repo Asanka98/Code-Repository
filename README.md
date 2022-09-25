@@ -4,3 +4,5 @@ usefull codes/tips for unix based systems
   - Apache hadoop
   - Docker
   - Python
+  - zeppelin
+  - Apache superset
