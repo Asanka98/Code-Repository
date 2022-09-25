@@ -1,0 +1,97 @@
+======== install update commands ======== 
+
+sudo apt install <package-name>         >> install packages
+
+sudo apt update                         >> list avialable updates
+
+sudo apt upgrade                        >> update packages
+sudo apt upgrade <package-name>         >> update packages
+
+sudo yum update                         >> update packages
+
+======== install update commands ======== 
+
+======== .deb and .rpm ======== 
+
+alien <package-name>.deb 
+
+alien -r <package-name>.yum 
+
+======== .deb and .rpm ======== 
+
+printenv SHELL
+whoami
+id
+id -i   - return id
+id -u -n
+uname
+uname -s -r
+uname
+uname -v
+ps      - running processors
+ps -u root
+top     - resource usage
+df      - mounted file systems
+df -h ~
+df -h 
+date    - today date
+man/man man     - reference manual
+top -n 3
+
+cp
+mv
+rm
+touch       - create empty file/ update timestamp
+chmod       - premissions related
+wc          - get count
+grep        - return lines in file matching pattern
+
+ls
+ls /
+ls-l <filename>
+ls -R
+pwd
+mkdir
+cd
+find . -name "<file>"
+find . -iname "<file>"
+rmdir
+rm <file>
+rm -r <file>
+touch a.txt b.txt
+
+cat
+more 
+head
+tail -3 <filename>
+wc <filename>
+wc -l/-w/-c<filename>
+echo ""
+
+tar -cf <filenameofarxh>.tar <filename>        - Archive set of files
+tar -czf <filenameofarxh>.tar.gz <filename> 
+tar -tf <filenameofarxh>.tar 		-view
+tar -xf <filenameofarxh>.tar 
+tar -xzf <filenameofarxh>.tar.gz <filename> 
+zip
+unzip
+
+
+hostname
+hostname -s
+hostname -i 	- hostname of ip
+hostname -I     - print my ip
+curl <url>      - display content of url
+wget <url>      - download content of url
+ipconfig
+ifconfig
+ifconfig eth0
+ping www.google.com / ping -c 5 www.google.com
+curl www.google.com
+curl www.google.com -o t.txt
+
+head -n 12 <filename>
+
+bash <filename> or ./filename
+
+

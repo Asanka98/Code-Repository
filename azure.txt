@@ -1,0 +1,17 @@
+serverforsynaps - servername
+synapsesql - admin
+synaps123#$ - password
+
+JDBC
+jdbc:sqlserver://serverforsynaps.database.windows.net:1433;database=DatabricsCourse;user=synapsesql@serverforsynaps;password=synaps123#$;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+
+
+ADO.NET
+Server=tcp:serverforsynaps.database.windows.net,1433;Initial Catalog=DatabricsCourse;Persist Security Info=False;User ID=synapsesql;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+
+
+
+dlstor11 - key
+
+
+

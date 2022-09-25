@@ -1,0 +1,25 @@
+export HADOOP_HOME=/home/hdoop/hadoop-3.2.2
+export HADOOP_INSTALL=$HADOOP_HOME
+export HADOOP_MAPRED_HOME=$HADOOP_HOME
+export HADOOP_COMMON_HOME=$HADOOP_HOME
+export HADOOP_HDFS_HOME=$HADOOP_HOME
+export YARN_HOME=$HADOOP_HOME
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
+export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/nativ"
+export HADOOP_COMMON_LIB_NATIVE_DIR="/usr/local/hadoop/lib/native/"
+export AIRFLOW_HOME=/mnt/c/Users/asanka/Documents/Airflow
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+
+
+alias python="python3"
+export PYSPARK_PYTHON=python
+export PATH="$PATH:/usr/lib/python3"
+
+
+Username [admin]: admin
+User first name [admin]: asanka
+User last name [user]: wijesinghe
+Email [admin@fab.org]: asanka.asb12345@gmail.com
+Password:
+Repeat for confirmation:

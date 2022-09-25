@@ -1,0 +1,35 @@
+airflow dags list ==========all tasks
+airflow tasks list <dagname>
+airflow dags unpause <dagname>
+airflow dags pause <dagname>
+
+
+source airflow_env/bin/activate
+airflow scheduler
+source airflow_env/bin/activate
+cd $AIRFLOW_HOME 		 
+airflow webserver
+
+
+/mnt/c/Users/asanka/IdeaProjects/ScalaApp1/src
+
+
+CREATE DATABASE airflow_db;
+CREATE USER airflow_user WITH PASSWORD 'airflow_pass';
+GRANT ALL PRIVILEGES ON DATABASE airflow_db TO airflow_user;
+
+postgresql+psycopg2://airflow_user:airflow_pass@localhost/airflow_db
+
+postgresql+psycopg2://airflow_user:airflow_pass@localhost/airflow_db
+
+ALTER USER airflow_user SET search_path = public;
+
+//path set & install airflow
+export AIRFLOW_HOME=/mnt/c/Users/asanka/Documents/Airflow
+https://insaid.medium.com/setting-up-apache-airflow-in-windows-using-wsl-8e0a87cd4945 --airflow install
+
+//create user
+airflow users create --username asanka --password 111111 --firstname Asanka --lastname Wijesinghe --role Admin --email asanka.b.wijesinghe@gmail.com
+
+ODBC setup
+Driver={PostgreSQL ANSI(x64)};Server=<host>;Port=5432;Database=<dbname>

@@ -1,0 +1,4 @@
+select count(state) as "state_count", state
+from dag_run
+group by state
+ORDER BY count(state) DESC 

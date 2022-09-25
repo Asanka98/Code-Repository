@@ -1,0 +1,2 @@
+SELECT * FROM anpq_data.data_set_load_config
+ORDER BY TO_NUMBER(id,'999') ASC

@@ -1,0 +1,8 @@
+docker run -p 8080:8080 -v /Users/asanka/zeppspark:/zeppelin/notebook --rm --name zeppelin_local apache/zeppelin:0.10.0
+
+
+C:/Users/Asanka
+
+docker run -p 8080:8080 -v C:/Users/Asanka/zeppspark:/zeppelin/notebook --rm --name zeppelin_local apache/zeppelin:0.10.0
+
+docker run -p 8095:8080 -v C:/Users/Asanka/zeppspark/zeppelin/notebook --rm --name zeppelin_local1 apache/zeppelin:0.10.0

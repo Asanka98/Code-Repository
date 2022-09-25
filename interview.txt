@@ -1,0 +1,59 @@
+1.Good morning Asanka How are you?
+
+	Im Fine thank you
+
+So Asanka let me introduce myself about our company and this role you applied
+I am Aloki . HR manager at Apple Inc. Our company is IT company started at 2015. 
+I am proud to that we have won best AI solution  award 4 times.
+we are looking for Data Engineer who is good at machine Learning and AI.
+
+2. Could you tell me about yourself and describe your background in brief?
+
+	I am from a kegalle and 23 years old, 
+	I started Degree programme in SLIIT. That’s where I learned to code and then 
+	in there i completed higher national deploma as software developer.currntly 
+	I am following specilation in Data Scince. After I got my first job as a intern Big Data Developer at DMS 
+	I continued to invest time in learning data engineering and machinle learning things
+
+3. How did you hear about this position?
+
+	I learned about the position through LinkedIn as I’ve been following your company’s page for a while now. 
+	I’m really passionate about the work you’re doing in Machine Learning, Data Engineering, and AWS platform,, so I was excited to apply. 
+	The required skills match well with the skills I have, and it seems like a great opportunity for me to contribute to your mission, 
+	as well as a great next move for my career.
+
+4. What type of work environment do you prefer?
+
+	I like fast-paced work environments because they make me feel like I’m always learning and growing, 
+	but I really thrive when I’m collaborating with team members and helping people reach a collective 
+	goal as opposed to competing. My last internship was at an organization with a similar culture, and I really enjoyed that balance.
+
+
+5.How do you deal with pressure or stressful situations?
+
+	I realize stressful situation are always going to come 
+	For every situtation I create a plan by myself and I try to follow my plan so it easy to skip stressfull parts easily
+
+
+6. When you’re balancing multiple projects, how do you keep yourself organized?
+
+	I’m used to juggling projects at my current job where I’m often moving between coding one software program to another. 
+	I use the timeboxing technique to make sure they’re all on track, allocating time on my calendar for certain tasks. it is rally helpfull
+	
+		
+7. What are your salary expectations?
+
+	Based on my skills and experience and on the current industry rates, 
+	I’m looking at a salary around 75000
+
+8. Are you applying for other jobs?
+
+	I’ve applied to a couple of other firms, but this role is really the one I’m most excited about right now because of the AI and ML things
+
+9. so asanka i m done from my side got the all informations.Dou Have Question?
+
+	Yes.Do you help us to get certified in some platforms
+
+10 Yes.we have seperate programmes for that
+
+Thank you for the participation have a nice day

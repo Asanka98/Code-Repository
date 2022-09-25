@@ -1,0 +1,10 @@
+docker run -p 127.0.0.1:90:8090/udp zeppelin bash
+
+docker run -d -p 3000:3000 b6dd521c464d
+
+
+
+
+docker run -p 3001:3001 --rm --name zeppelin2 apache/zeppelin:0.10.0
+
+docker run -u $(id -u) -p 8080:8080 --rm -v $PWD/logs:/logs -v $PWD/notebook:/notebook -e ZEPPELIN_LOG_DIR='/logs' -e ZEPPELIN_NOTEBOOK_DIR='/notebook'  --name zeppelin apache/zeppelin:0.10.0

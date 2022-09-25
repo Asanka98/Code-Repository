@@ -1,0 +1,195 @@
+wsl in cmd
+
+To create a directory under the user home:
+
+hdfs dfs –mkdir –p /user/clsadmin/test-dir
+To upload a file to an existing HDFS directory:
+
+hdfs dfs –put test-file /user/clsadmin/test-dir
+To delete a file or directory from HDFS:
+
+hdfs dfs –rm –f /user/clsadmin/test-dir
+
+lsb_release -cd ; hostname ; hostname -I ; whoami ; getconf LONG_BIT ; java -version ; echo $JAVA_HOME
+
+cacls sbtscalaspark_2.13-0.1.0-SNAPSHOT.jar /g everyone:f   //win permission
+
+chmod guo+rx spark-setup-1.0-SNAPSHOT-jar-with-dependencies.jar
+\\wsl$\Ubuntu
+
+ hdfs dfs -chown Asanka /data1
+
+tar -xvzf zeppelin-0.7.3-bin-all.tgz 
+sudo tar xf zeppelin-*-bin-all.tgz
+
+bin/zeppelin-daemon.sh start
+
+cat /etc/os-release
+
+sudo rm -r "ffgfdg"
+
+sudo service apache2 --full-restart
+
+sudo service ssh start
+
+sudo service ssh start postgresql.service
+
+sudo service ssh start application.service
+
+sudo service postgresql start
+
+sudo service ssh start zeppelin.service
+sudo service  zeppelin start
+
+zeppelin-0.10.1-bin-all/bin/zeppelin-daemon.sh start
+
+sudo service start nginx
+
+sudo service enable nginx
+
+sudo service ssh restart
+
+source venv/bin/activate
+
+sudo service ssh start
+
+source airflow_env/bin/activate
+airflow scheduler
+
+source airflow_env/bin/activate
+cd $AIRFLOW_HOME 		 
+airflow webserver
+
+
+https://superset.apache.org/docs/installation/installing-superset-from-scratch/
+
+. venv/bin/activate
+
+
+
+pyenv virtualenv superset
+pyenv activate superset
+
+export FLASK_APP=superset
+
+superset fab create admin
+superset init
+superset run
+
+# Create an admin user in your metadata database (use `admin` as username to be able to load the examples)
+export FLASK_APP=superset
+superset fab create-admin
+
+# Load some data to play with
+superset load_examples
+
+# Create default roles and permissions
+superset init
+
+# To start a development web server on port 8088, use -p to bind to another port
+superset run -p 8088 --with-threads --reload --debugger
+
+
+sudo update-alternatives --config java --select java version
+
+source deactivate' is deprecated. Use 'conda deactivate
+
+sudo /usr/pgadmin4/bin/setup-web.sh
+
+start-master.sh
+
+start-slave.sh spark://master:port
+
+start-slave.sh spark://ubuntu1:7077
+
+spark-shell
+
+ ../.././opt/spark/bin/spark-class org.apache.spark.deploy.SparkSubmit
+
+wget https://hadoop.apache.org/release/3.2.2.html
+
+tar xzf #hadoop-3.2.1.tar.gz
+
+
+There are 3 commands you need to know once PostgreSQL is installed:
+
+    sudo service postgresql status for checking the status of your database.
+    sudo service postgresql start to start running your database.
+    sudo service postgresql stop to stop running your database.
+
+The default admin user, postgres, needs a password assigned in order to connect to a database. To set a password:
+
+    Enter the command: "sudo passwd postgres" You will get a prompt to enter your new password
+    Close and reopen your terminal.
+
+To run PostgreSQL with psql shell:
+
+   sudo service postgresql start
+   psql shell: sudo -u postgres psql
+
+switching to the postgres user with: su - postgres 
+
+To exit postgres=# enter: \q 
+
+
+zip test.zip filename
+scp test.zip osssupport@172.24.6.171:/apps/nfs-shared/nifi/scripts/
+unzip test.zip
+gF7bq^pJH5sh9z
+
+C:\Users\Asanka\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc\LocalState
+
+cp ../../mnt/c/in.zip /home/asanka/
+
+sudo chmod a+rwx ANPQ
+
+!wget -q  --trust-server-names https://dlcdn.apache.org/spark/spark-3.1.3/spark-3.1.3-bin-hadoop3.2.tgz
+sudo mv 'spark-3.1.3-bin-hadoop3.2' /opt/spark
+
+
+sudo apt install python3-pip
+sudo pip3 install virtualenv
+virtualenv airflow_env
+
+
+sudo nano ~/.bashrc
+source ~/.bashrc
+
+
+scalac Job1.scala -d job1.jar
+jar tvf job1.jar
+scal job1.jar
+
+jar cmvf META-INF/MANIFEST.MF <new-jar-filename>.jar  <files to include>
+jar cmvf job1.jar  Main-Class:Job1
+
+
+/home/asanka/Intellij/nsn/nokia-xml-parser/src/main/scala/com/bigdata/nokia/parser/base/NokiaParserMain.scala
+/home.asanka.Intellij.nsn.nokia-xml-parser.src.main.scala.com.bigdata.nokia.parser.base.NokiaParserMain.scala
+
+../../../../.././opt/spark/bin/spark-submit \
+--master local[8]\
+--class com.bigdata.nokia.parser.base.NokiaParserMain \
+/home/asanka/Intellij/nsn/nokia-xml-parser/target/nokia-xml-parser-1.0-SNAPSHOT-jar-with-dependencies.jar \
+CM /home/asanka/nsn_input/RC11.21-01-20.eNB.xml
+
+java -jar /home/asanka/Intellij/nsn/nokia-xml-parser/target/nokia-xml-parser-1.0-SNAPSHOT-jar-with-dependencies.jar CM /home/asanka/nsn_input/RC11.21-01-20.eNB.xml
+
+com.bigdata.nokia.parser.base.NokiaParserMain
+
+	/Intellik/nsn/nokia-xml-parser/target/nokia-xml-parser-1.0-SNAPSHOT-jar-with-dependencies.jar
+
+export CLASSPATH=/usr/local/lib/myapp.jar:/usr/local/pgsql/share/java/ postgresql-42.4.0.jar:.
+
+git clone link
+git switch -c origin/dev/release_0
+
+
+publishLocal
+builds the artifact and publish in the local Ivy repository making it available for your local project dependencies.
+
+publishM2
+
+http://localhost/pgadmin4/browser/
+
+docker run -p 8090:8090 --rm --name zeppelin apache/zeppelin:0.10.0

@@ -1,0 +1,10 @@
+sudo service start ssh
+start-all.sh
+hdfs dfs -ls /
+hdfs dfs -copyFromLocal words.txt /data |  hadoop fs -copyFromLocal words.txt /data
+hdfs dfs -cp /data/words.txt /data/words2.txt | hadoop fs -cp /data/words.txt /data/words2.txt
+hadoop fs -copyToLocal /data/words2.txt
+hadoop fs -rm /data/words2.txt
+hadoop jar hadoop-3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.2.jar -- view options
+hadoop jar hadoop-3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.2.jar <wordcount> <inputfile> <outputfile>
+hadoop fs -ls <output>

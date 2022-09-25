@@ -1,0 +1,17 @@
+echo "database" ! cut -c<start>-<end> 	========range
+
+echo "database" ! cut -c<start>,<end> 	========indexs first and last
+
+cut -d":" -f1 /etc/passwd
+cut -d"<delimeter>" -f<fieldnumber> /etc/passwd
+
+
+echo "Shell Scripting" | tr "[a-z]" "[A-Z]" 	== SHELL SCRIPTING
+
+
+echo "Shell Scripting" | tr "[:upper:]" "[:lower:]  	  == lower to upper
+echo "Shell Scripting" | tr "[a-z]" "[A-Z]"		  == lower to upper
+
+
+
+echo "My login pin is 5634" | tr -d "[:digit:]"   	== -d for delete

@@ -1,0 +1,69 @@
+wget https://archive.apache.org/dist/kafka/2.8.0/kafka_2.12-2.8.0.tgz
+
+tar -xzf kafka_2.12-2.8.0.tgz
+
+-----------start zookeeper
+cd kafka_2.12-2.8.0
+bin/zookeeper-server-start.sh config/zookeeper.properties
+-----------start zookeeper
+
+-----------start kafka
+cd kafka_2.12-2.8.0
+bin/kafka-server-start.sh config/server.properties
+-----------start kafka
+
+
+-----------create topic
+cd kafka_2.12-2.8.0
+bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --topic <topicname>  --partitions 2
+
+-----------view topics
+bin/kafka-topics.sh --bootstrap-server localhost:9092 --list
+
+-----------details about topic
+bin/kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic <topicname>
+
+-----------create producer for topic
+cd kafka_2.12-2.8.0
+bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic <topicname>
+
+
+-------start consumer to subscribe topics
+cd kafka_2.12-2.8.0
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <topicname> --from-beginning
+
+
+------------Produce and consume with message keys
+bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic <topicname> --property parse.key=true --property key.separator=:
+
+ex - 1:{"atmid": 1, "transid": 102}
+
+
+--------------------consuming wih keys
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <topicname> --from-beginning --property print.key=true --property key.separator=:
+
+
+---consumer with group
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <topicname> --group <topicname>
+
+---consumer with group details
+bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group atm-app
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

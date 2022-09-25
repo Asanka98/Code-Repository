@@ -1,0 +1,288 @@
+
+
+docker run -it ubuntu
+
+exit
+
+{
+  "metrics-addr" : "10.0.2.15:9323",
+  "experimental" : true
+}
+
+curl 10.0.2.15:9323/metrics
+
+curl 10.0.2.15:32771/metrics
+
+
+
+hostname -I 
+hostname -i
+
+password = mypassword
+
+CREATE USER 'asanka'@'%' IDENTIFIED BY '111111' WITH MAX_USER_CONNECTIONS 3;
+
+GRANT PROCESS, REPLICATION CLIENT, SELECT ON *.* TO 'asanka'@'%';
+
+docker run -d \
+--name mysql80-exporter \
+--publish 9104 \
+--network db_network \
+--restart always \
+--env DATA_SOURCE_NAME="asanka:111111@(mysql80:3306)/" \
+prom/mysqld-exporter:latest \
+--collect.info_schema.processlist \
+--collect.info_schema.innodb_metrics \
+--collect.info_schema.tablestats \
+--collect.info_schema.tables \
+--collect.info_schema.userstats \
+--collect.engine_innodb_status \
+--collect.slave_status \
+--collect.slave_hosts
+
+docker run -d \
+--name mysql57-exporter \
+--publish 9104 \
+--network db_network \
+--restart always \
+--env DATA_SOURCE_NAME="asanka:111111@(mysql57:3306)/" \
+prom/mysqld-exporter:latest \
+--collect.info_schema.processlist 0\
+--collect.info_schema.innodb_metrics \
+--collect.info_schema.tablestats \
+--collect.info_schema.tables \
+--collect.info_schema.userstats \
+--collect.engine_innodb_status \
+--collect.slave_status \
+--collect.slave_hosts
+
+10.0.2.15 172.17.0.1 172.18.0.1
+
+###################################################
+
+global:
+  scrape_interval:     5s
+  scrape_timeout:      3s
+  evaluation_interval: 5s
+ 
+# Our alerting rule files
+rule_files:
+  - "alert.rules"
+ 
+# Scrape endpoints
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['10.0.2.15:9090']
+ 
+  - job_name: 'mysql'
+    static_configs:
+      - targets: ['mysql57-exporter:9104','mysql80-exporter:9104']
+ 
+  - job_name: 'docker'
+    static_configs:
+      - targets: ['10.0.2.15:9323']
+
+#######################################################################
+
+  http://10.0.2.15:9090/
+ 
+  http://10.0.2.15:3000/
+  
+  http://10.0.2.15:9090/
+  
+  graffana run in docker 
+  
+  docker run -d -p 3000:3000 grafana/grafana-enterprise
+  
+  sudo -u hduser hadoop fs -mkdir gsb/nsn/CM/TMP1
+  
+  global:
+  scrape_interval:     5s
+  scrape_timeout:      3s
+  evaluation_interval: 5s
+ 
+# Our alerting rule files
+rule_files:
+  - "alert.rules"
+ 
+# Scrape endpoints
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['10.0.2.15:9090']
+ 
+  - job_name: 'mysql'
+    static_configs:
+      - targets: ['mysql57-exporter:9104','mysql80-exporter:9104']
+ 
+  - job_name: 'docker'
+    static_configs:
+      - targets: ['10.0.2.15:9323']
+      
+  - job_name: 'node-exporter'
+    static_configs:
+      - targets: ['10.0.2.15:9100']
+
+
+docker run -d \
+--name prometheus-server \
+--publish 9090:9090 \
+--network db_network \
+--restart unless-stopped \
+--mount type=volume,src=prometheus-data,target=/prometheus \
+--mount type=bind,src="$(pwd)"/prometheus.yml,target=/etc/prometheus/prometheus.yml \
+prom/prometheus
+
+
+
+docker ps
+docker ps -a
+docker ps -l
+docker start <id>
+docker stop <name>
+
+docker commit -m "What you did to the image" -a "asanka" 6576f3c5fe2b repository/elegant_hawking
+
+CONTAINER ID   IMAGE     COMMAND   CREATED         STATUS                        PORTS     NAMES
+6576f3c5fe2b   ubuntu    "bash"    6 minutes ago   Exited (127) 21 seconds ago    elegant_hawking
+
+docker commit -m "added Node.js" -a "asanka" 6576f3c5fe2b asanka/ubuntu-nodejs
+
+docker images
+
+http://localhost:9090/
+
+sudo apt-get purge -y docker docker-engine docker docker.io docker-ce docker-ce-cli docker-compose-plugin
+
+sudo apt autoremove docker docker-engine docker docker.io docker-ce docker-ce-cli docker-compose-plugin
+
+
+
+sudo apt-get install -f
+
+https://phoenixnap.com/kb/fix-sub-process-usr-bin-dpkg-returned-error-code-1
+
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
+
+https://severalnines.com/database-blog/how-monitor-mysql-containers-prometheus-deployment-standalone-and-swarm-part-one
+
+https://fedingo.com/how-to-uninstall-docker-in-ubuntu/ -- remove files 
+
+sudo apt-get update
+
+sudo chmod a+rwx /var/lib/dpkg/lock-frontend
+
+5:20.10.16~3-0~ubuntu-focal
+
+dpkg -l containerd*
+
+dpkg -l | grep containerd
+
+sudo apt-get install docker.io 
+
+sudo apt-get dist-upgrade
+
+sudo apt-get install containerd=1.3.3-0ubuntu2
+
+sudo apt-get install docker.io
+
+docker -v
+
+sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+    
+/usr/share/keyrings/docker-archive-keyring.gpg  # key file
+    
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt-get update
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+apt-cache madison docker-ce
+
+5:20.10.16~3-0~ubuntu-focal
+
+sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=5:20.10.16~3-0~ubuntu-focal containerd.io docker-compose-plugin
+
+sudo apt-get install docker-ce=5:20.10.16~3-0~ubuntu-focal docker-ce-cli=5:20.10.16~3-0~ubuntu-focal containerd.io docker-compose-plugin
+
+sudo docker run hello-world
+
+sudo docker network create db_network
+
+sudo docker run -d --name mysql80 --publish 3306 --network db_network --restart unless-stopped --env MYSQL_ROOT_PASSWORD=mypassword --volume mysql80-datadir:/var/lib/mysql mysql:8 --default-authentication-plugin=mysql_native_password
+
+sudo docker run -d \
+--name mysql57 \
+--publish 3306 \
+--network db_network \
+--restart unless-stopped \
+--env MYSQL_ROOT_PASSWORD=mypassword \
+--volume mysql57-datadir:/var/lib/mysql \
+mysql:5.7
+
+
+/*
+
+sudo docker run hello-world
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+2db29710123e: Pull complete 
+Digest: sha256:80f31da1ac7b312ba29d65080fddf797dd76acfb870e677f390d5acba9741b17
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+
+
+
+*/
+
+
+
+
+
+Go to https://download.docker.com/linux/ubuntu/dists/, choose your Ubuntu version, then browse to pool/stable/, choose amd64, armhf, arm64, or s390x, and download the .deb file for the Docker Engine version you want to install.
+
+    Note
+
+    To install a nightly or test (pre-release) package, change the word stable in the above URL to nightly or test. Learn about nightly and test channels.
+
+Install Docker Engine, changing the path below to the path where you downloaded the Docker package.
+
+ sudo dpkg -i /path/to/package.deb
+
+The Docker daemon starts automatically.
+
+Verify that Docker Engine is installed correctly by running the hello-world image.
+
+ sudo docker run hello-world
+

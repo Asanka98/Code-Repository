@@ -1,0 +1,3 @@
+
+hdfs dfs -mkdir -p /apps/hive/warehouse
+hdfs dfs -chmod 77 /dir

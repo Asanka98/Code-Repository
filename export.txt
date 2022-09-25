@@ -1,0 +1,4 @@
+air flow job 1 > b > c > DAG > dashboard or database
+how to track and visualize
+plugins
+research
